@@ -2,13 +2,13 @@
 
 ## Introduction
 
-Phase 1 of the 2021 PARC Engineer's League competition entailed developing robot software for the safe navigation of a delivery robot, from pick-up to customer package drop-off within a simulated environment. This phase further involved validating developed software through appropriate simulations and visualizations on Gazebo and RViz respectively, to satisfy competition requirements and achieve desirable scores on task metrics.<br>
+This project is my solution for the third and final task of Phase 1 of the 2021 Pan-African Robotics Competiton (PARC) Engineers' League. The competition entailed developing robot software for the safe navigation of a delivery robot, from pick-up to customer package drop-off within a simulated environment (Gazebo). This phase further involved validating developed software through appropriate simulations and visualizations on Gazebo and RViz respectively, to satisfy competition requirements and achieve desirable scores on task metrics.<br>
    
-As a member of Team Kognitive Robotics, I was tasked with the third task of Phase 1, which was to write robot software that allowed for safe maneuvers of the robot (with dynamic obstacle avoidance) from a random initial pose in the world to a marked package dropoff location in simulation. 
+As a member of Team Kognitive Robotics, I was tasked with writing robot software to enable the delivery robot execute safe maneuvers (with dynamic obstacle avoidance) from a random initial pose in the world to a marked package dropoff location. 
 
 ## Dependencies
 
-**Dependencies used for the above-described part of the project were:**
+**The dependencies used for the above-described part of the project were:**
 
 *  `geometry_msgs`
 *  `roscpp`
