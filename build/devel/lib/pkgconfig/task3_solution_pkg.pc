@@ -1,0 +1,8 @@
+prefix=/home/intellimath/catkin_ws/src/solutions/task3_solution_pkg/build/devel
+
+Name: task3_solution_pkg
+Description: Description of task3_solution_pkg
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

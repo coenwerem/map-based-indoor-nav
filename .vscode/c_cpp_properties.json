@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "",
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "/home/intellimath/catkin_ws/devel/include/**",
+                "/opt/ros/melodic/include/**",
+                "/home/intellimath/catkin_ws/src/grome_bt_teleop/include/**",
+                "/home/intellimath/catkin_ws/src/orb_slam_pkg/include/**",
+                "/home/intellimath/catkin_ws/src/PARC-Engineers-League/realsense-ros/realsense2_camera/include/**",
+                "/home/intellimath/catkin_ws/src/PARC-Engineers-League/realsense_gazebo_plugin/include/**",
+                "/home/intellimath/catkin_ws/src/ros_essentials_cpp/include/**",
+                "/home/intellimath/catkin_ws/src/PARC-Engineers-League/scout_ros/scout_base/include/**",
+                "/home/intellimath/catkin_ws/src/PARC-Engineers-League/scout_ros/scout_gazebo_sim/include/**",
+                "/home/intellimath/catkin_ws/src/PARC-Engineers-League/scout_ros/scout_webots_sim/include/**",
+                "/home/intellimath/catkin_ws/src/solutions/task3_solution_pkg/include/**",
+                "/home/intellimath/catkin_ws/src/PARC-Engineers-League/agx_sdk/include/**",
+                "/usr/include/**"
+            ],
+            "name": "ROS",
+            "configurationProvider": "ms-vscode.cmake-tools"
+        }
+    ],
+    "version": 4
+}

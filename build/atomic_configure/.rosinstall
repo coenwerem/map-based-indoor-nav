@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/intellimath/catkin_ws/src/solutions/task3_solution_pkg/build/devel/setup.sh
