@@ -10,7 +10,6 @@ As a member of Team Kognitive Robotics, I was tasked with writing robot software
 
 **The dependencies used for the above-described part of the project were:**
 
-*  `geometry_msgs`
 *  `roscpp`
 *  `rospy`
 *  `std_msgs`
