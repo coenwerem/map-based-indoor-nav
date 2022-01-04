@@ -16,7 +16,6 @@ As a member of Team Kognitive Robotics, I was tasked with writing robot software
 *  `std_msgs`
 *  `gazebo_msgs`
 *  `geometry_msgs`
-*  `gazebo_msgs`
 *  `move_base_msgs`
 *  `sensor_msgs`
 *  `nav_msgs`
@@ -64,4 +63,4 @@ You can also find a longer YouTube video showing the above solution [here](https
 * The path was always planned dangerously close to obstacles causing the robot to bump into them. I solved this by increasing the inflation radius in the costmap_common_params.yaml file.
 * The occassional `catkin_make` fails.
 * The height of the RP LiDAR from the ground was lower than some obstacles (e.g. the base of the gazebo model in task3.world). This led to some undefined areas in the built static map and hence, poorly planned paths. However, I tuned the ROS Trajectory planner parameters to account for this constraint.
-* In sum, Gazebo is a memory and battery hog. Having to code, run simulations, and debug with a laggy mid-range PC all while trying to economize battery power was frustrating to say the least. Other physics engines and robot simulators like Drake and CopelliaSim Edu (formerly VREP) are free, work just as well as Gazebo, and integrate smoothly with ROS, without the aforementioned constraints.
+* In sum, Gazebo is a memory and battery hog. Having to code, run simulations, and debug with a laggy mid-range PC all while trying to economize battery power was frustrating to say the least. Other robot simulators like [Drake](https://drake.mit.edu/) and [CoppeliaSim](https://www.coppeliarobotics.com/) (formerly VREP) are free, work just as well as Gazebo, and integrate well with the ROS ecosystem, without the aforementioned constraints.
