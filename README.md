@@ -2,9 +2,9 @@
 
 ## Introduction
 
-This project is my solution for the third and final task of Phase 1 of the 2021 Pan-African Robotics Competiton (PARC) Engineers' League, where my team also placed in the finals. The competition entailed developing robot software for the safe navigation of a delivery robot, from pick-up to customer package drop-off within a simulated environment (Gazebo). This phase further involved validating developed software through appropriate simulations and visualizations on Gazebo and RViz respectively, to satisfy competition requirements and achieve desirable scores on task metrics.<br>
+This project is my solution for the third and final task of Phase 1 of the 2021 Pan-African Robotics Competiton (PARC) Engineers' League, where my team also placed in the finals. The competition entailed developing robot software for the safe navigation of a delivery robot &mdash; from pick-up to customer package drop-off &mdash; within a custom Gazebo environment. We were also required to validate our software to meet specific goals and task completion requirements.<br>
    
-As a member of Team Kognitive Robotics, I was tasked with writing robot software to enable the delivery robot execute safe maneuvers (with dynamic obstacle avoidance) from a random initial pose in the world to a marked package dropoff location. 
+As a member of Team Kognitive Robotics, I wrote robot software to enable the delivery robot execute safe maneuvers (with dynamic obstacle avoidance) from a random initial pose in the world to a marked package dropoff location. 
 
 ## Dependencies
 
@@ -20,7 +20,7 @@ As a member of Team Kognitive Robotics, I was tasked with writing robot software
 *  `nav_msgs`
 
 
-**To run this package on your machine, you will need the following ROS packages. Ideally, you should have a ROS Melodic installation on a machine running Ubuntu 18.04:**
+**To run this package, you will need the following ROS packages. Ideally, you should have ROS Melodic installed on an Ubuntu 18.04 machine:**
 
 
 * `slam-gmapping`: ROS package for Simultaneous Localization & Mapping (SLAM).
@@ -36,7 +36,7 @@ As a member of Team Kognitive Robotics, I was tasked with writing robot software
 
 ## Deployed Approach
 
-For this phase of the competiton, I employed the ROS Autonomous Navigation stack by first building a static map of the environment through teleoperation and using the slam-gmapping package for SLAM. <br>
+For this phase of the competiton, I employed the ROS Autonomous Navigation stack by first building a static map of the environment through teleoperation, and then using the slam-gmapping package for SLAM. <br>
 
 Next, I applied the Adaptive Monte-Carlo Localization (AMCL) technique (for global localization) alongside the ROS Trajectory Planner (for motion planning) to plan an optimal navigation path by creating appropriate configuration files (*_params.yaml files) in the ./config folder and important arguments and parameters (e.g initial robot pose, map file, map server, etc.) in the task solution launch file. I also iteratively tuned several parameters notably the robot's footprint, inflation layer radius, and controller obstacle avoidance weight to arrive at an optimal and obstacle-free path from the robot to the goal. <br>
 
@@ -58,8 +58,8 @@ You can also find a longer YouTube video showing the above solution [here](https
 
 ## Challenges Faced
 
-* The robot always appeared at the wrong pose relative to the map in RViz. I fixed this by setting initial pose AMCL arguments.
-* The path was always planned dangerously close to obstacles causing the robot to bump into them. I solved this by increasing the inflation radius in the costmap_common_params.yaml file.
+* The robot always appeared in the wrong pose relative to the map in RViz. I fixed this by setting initial-pose AMCL arguments.
+* The path was always planned dangerously close to obstacles, causing the robot to bump into them. I solved this by increasing the inflation radius in the costmap_common_params.yaml file.
 * The occassional `catkin_make` fails.
 * The height of the RP LiDAR from the ground was lower than some obstacles (e.g. the base of the gazebo model in task3.world). This led to some undefined areas in the built static map and hence, poorly planned paths. However, I tuned the ROS Trajectory planner parameters to account for this constraint.
-* In sum, Gazebo is a memory and battery hog. Having to code, run simulations, and debug with a laggy mid-range PC all while trying to economize battery power was frustrating to say the least. Other robot simulators like [Drake](https://drake.mit.edu/) and [CoppeliaSim](https://www.coppeliarobotics.com/) (formerly VREP) are free, work just as well as Gazebo, and integrate well with the ROS ecosystem, without the aforementioned constraints.
+* Gazebo's memory-hogging problems. Consider using [CoppeliaSim](https://www.coppeliarobotics.com/) (formerly VREP), which has a free educational license and ROS integration.
