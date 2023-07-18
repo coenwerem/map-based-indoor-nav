@@ -49,17 +49,3 @@ The command required to run this package is as follows: <br>
 A short gif of the code in action is shown below:<br>
 
 ![Task 3 Solution](./resources/task3_sol_vid.gif)
-
-
-
-You can also find a longer YouTube video showing the above solution [here](https://youtu.be/pzsVFjBKmpc).<br>
-
-
-
-## Challenges Faced
-
-* The robot always appeared in the wrong pose relative to the map in RViz. I fixed this by setting initial-pose AMCL arguments.
-* The path was always planned dangerously close to obstacles, causing the robot to bump into them. I solved this by increasing the inflation radius in the costmap_common_params.yaml file.
-* The occassional `catkin_make` fails.
-* The height of the RP LiDAR from the ground was lower than some obstacles (e.g. the base of the gazebo model in task3.world). This led to some undefined areas in the built static map and hence, poorly planned paths. However, I tuned the ROS Trajectory planner parameters to account for this constraint.
-* Gazebo's memory-hogging problems. Consider using [CoppeliaSim](https://www.coppeliarobotics.com/) (formerly VREP), which has a free educational license and ROS integration.
